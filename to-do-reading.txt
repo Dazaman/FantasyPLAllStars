@@ -1,0 +1,7 @@
+- https://github.com/amosbastian/fpl
+- https://fpl.readthedocs.io/en/latest/index.html
+- https://medium.com/@YourMumSaysWhat/how-to-get-data-from-the-fantasy-premier-league-api-4477d6a334c3
+- http://www.fantasyfutopia.com/python-for-fantasy-football-apis-and-json-data/
+- https://github.com/Botafogo1894/EPL_Sandbox/blob/master/scraping_EPL_clean.ipynb
+- https://towardsdatascience.com/beating-the-fantasy-premier-league-game-with-python-and-data-science-cf62961281be
+- 
