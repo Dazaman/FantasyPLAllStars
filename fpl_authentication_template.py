@@ -1,8 +1,12 @@
 import asyncio
 import aiohttp
 from prettytable import PrettyTable
-
+import numpy as np
 from fpl import FPL
+import pprint
+
+
+## sudo $(which pip) install fpl
 
 
 async def main():
@@ -12,8 +16,17 @@ async def main():
         await fpl.login(email='balreddy27@gmail.com' , password='balreddy@27')
         user = await fpl.get_user(4752994)
         my_team = await user.get_team()
+        my_picks = await user.get_picks()
+        p = await fpl.get_player(460)
+        
+    team = np.array(my_team)
+    players = np.array(players)
 
-    print('\nmyteam  : ',my_team)
+    print('\nmyteam  : ',team.shape, team[0])
+    # print('\nmypicks  : ',my_picks.shape, team[0])
+    print('players : ', players.shape, players[0])
+    
+    print(p)
 
     top_performers = sorted(
         players, key=lambda x: x.goals_scored + x.assists, reverse=True)
