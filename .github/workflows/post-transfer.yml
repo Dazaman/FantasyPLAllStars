@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: File Transfer
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Copy
+      uses: andstor/copycat-action@v1.1.0
+      env:
+        DST_BRANCH: GitHubActionsTest
+        DST_OWNER: dazaman
+        DST_REPO_NAME: FantasyPLAllStars
+        DST_PATH: /wiki/.
+        GH_PAT: a8d2f881e8ad8bac104c8b3215435842661aace1
+        SRC_BRANCH: master
+        SRC_PATH: /wiki/.
+        SRC_WIKI: "false"
+        USERNAME: dazaman
+        EMAIL: dazam92@gmail.com
