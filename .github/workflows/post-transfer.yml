@@ -20,7 +20,7 @@ jobs:
         DST_OWNER: dazaman
         DST_REPO_NAME: FantasyPLAllStars
         DST_PATH: /wiki/.
-        GH_PAT: a8d2f881e8ad8bac104c8b3215435842661aace1
+        GH_PAT: ${{ secrets.GH_PAT }}
         SRC_BRANCH: master
         SRC_PATH: /wiki/.
         SRC_WIKI: "false"
