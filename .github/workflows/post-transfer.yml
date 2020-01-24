@@ -22,8 +22,14 @@ jobs:
       with:
         ref: origin/master wiki/.
 
-    - name: Push to Master branch
+    - name: Commit to Master branch
       run: |
         git add .
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git commit -m 'Added member posts to public'
-        git push origin master
+    
+    - name: Push Changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
