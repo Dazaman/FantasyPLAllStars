@@ -28,6 +28,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m 'Added member posts to public'
+        git pull
     
     - name: Push Changes
       uses: ad-m/github-push-action@master
