@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - name: Checkout Test Branch
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
       with:
         ref: actiontest
     - name: Copy
-      uses: actions/checkout@v2
+      uses: actions/checkout@v1
       with:
         ref: master -- /wiki/Test.md
