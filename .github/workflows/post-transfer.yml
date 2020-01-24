@@ -1,4 +1,4 @@
-name: CI
+name: Copy Test
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     - name: Checkout Test Branch
       uses: actions/checkout@v1
       with:
-        ref: actiontest
+        ref: GitHubActionsTest
     - name: Copy
       uses: actions/checkout@v1
       with:
