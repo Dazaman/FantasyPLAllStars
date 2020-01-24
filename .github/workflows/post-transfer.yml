@@ -19,4 +19,4 @@ jobs:
     - name: Copy
       uses: actions/checkout@v1
       with:
-        ref: master /wiki/Test.md
+        ref: master wiki/.
