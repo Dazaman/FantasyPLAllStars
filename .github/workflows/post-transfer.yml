@@ -22,15 +22,15 @@ jobs:
       with:
         ref: origin/master wiki/.
 
-    - name: Commit to Master branch
+    - name: Commit to GitHubActionsTest branch
       run: |
         git add .
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m 'Added member posts to public'
-        git pull
+        git pull origin GitHubActionsTest
     
     - name: Push Changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@GitHubActionsTest
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
