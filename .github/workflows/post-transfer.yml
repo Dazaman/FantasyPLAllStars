@@ -12,6 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@actiontest
+    - name: Checkout Test Branch
+      uses: actions/checkout@v2
+      with:
+        ref: actiontest
     - name: Copy
-      uses: actions/checkout@master -- /wiki/Test.md
+      uses: actions/checkout@v2
+      with:
+        ref: master -- /wiki/Test.md
