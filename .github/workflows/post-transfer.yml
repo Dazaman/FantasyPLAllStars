@@ -12,17 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@actiontest
     - name: Copy
-      uses: andstor/copycat-action@v1.1.0
-      env:
-        DST_BRANCH: GitHubActionsTest
-        DST_OWNER: dazaman
-        DST_REPO_NAME: FantasyPLAllStars
-        DST_PATH: /wiki/.
-        GH_PAT: ${{ secrets.GH_PAT }}
-        SRC_BRANCH: master
-        SRC_PATH: /wiki/.
-        SRC_WIKI: "false"
-        USERNAME: dazaman
-        EMAIL: dazam92@gmail.com
+      uses: actions/checkout@master -- /wiki/Test.md
