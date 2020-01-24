@@ -16,7 +16,8 @@ jobs:
       uses: actions/checkout@v1
       with:
         ref: GitHubActionsTest
-    - name: Copy
-      uses: actions/checkout@v1
-      with:
-        ref: master wiki/.
+    - run: git checkout master wiki/.
+#     - name: Copy
+#       uses: actions/checkout@v1
+#       with:
+#         ref: master wiki/.
